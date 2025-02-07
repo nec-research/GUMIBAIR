@@ -1,0 +1,30 @@
+hpo:
+    beta: 0.002328572731418688
+    hidden_decoder:
+    - 16
+    hidden_encoder:
+    - 256
+    - 128
+    lr: 0.0008459945511399442
+    n_latents: 112
+    p_drop: 0.11537107810037038
+
+general_config:
+    n_heads: 1
+    epochs: 2
+    batch_size: 64
+    monitor: 'max'
+    test_size: 0.2
+    val_size: 0.16
+    log: False
+    log_dir: ./
+    device: cpu
+
+    conditioning_type: 'cohort'
+
+    cohorts_to_disease: 
+        CRC_FengQ_2015: Colorectal
+        CRC_GuptaA_2019: Colorectal   
+
+    path: /mnt/container-nle-microbiome/datav3/
+    mode: unimodal

@@ -1,0 +1,11 @@
+cohorts_to_disease:
+  "CRC_FengQ_2015": "Colorectal"
+  "CRC_GuptaA_2019": "Colorectal"
+  "CRC_HanniganGD_2017": "Colorectal"
+  "CRC_ThomasAM_2018a": "Colorectal"
+  "CRC_ThomasAM_2018b": "Colorectal"
+  "CRC_VogtmannE_2016": "Colorectal"
+  "CRC_WirbelJ_2018": "Colorectal"
+  #"CRC_YachidaS_2019": "Colorectal"
+  "CRC_YuJ_2015": "Colorectal"
+  "CRC_ZellerG_2014": "Colorectal"

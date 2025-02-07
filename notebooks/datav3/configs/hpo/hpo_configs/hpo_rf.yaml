@@ -1,0 +1,25 @@
+general_config:
+    'monitor': 'max'
+    'test_size': 0.2
+    'hpo_seed': 42
+    'num_samples': 300
+    'max_concurrent_trials': 10
+
+search_space:
+    'n_estimators': [200, 1000]
+    'max_features': ['sqrt', 'log2']
+    'min_samples_leaf': [1, 4]
+    'criterion': ['gini', 'entropy']
+    'gene_filter': ['None', '5']
+
+cohorts_to_disease:
+    "CRC_FengQ_2015": "Colorectal"
+    # "CRC_GuptaA_2019": "Colorectal"
+    # "CRC_HanniganGD_2017": "Colorectal"
+    # "CRC_ThomasAM_2018a": "Colorectal"
+    # "CRC_ThomasAM_2018b": "Colorectal"
+    # # "CRC_ThomasAM_2019_c": "Colorectal"
+    # "CRC_VogtmannE_2016": "Colorectal"
+    # "CRC_WirbelJ_2018": "Colorectal"
+    # "CRC_YachidaS_2019": "Colorectal"
+    # "CRC_YuJ_2015": "Colorectal"

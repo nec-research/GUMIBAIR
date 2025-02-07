@@ -1,0 +1,12 @@
+study_name,disease
+HanniganGD_2017,CRC
+FengQ_2015,CRC
+YuJ_2015,CRC
+YachidaS_2019,CRC
+ZellerG_2014,CRC
+VogtmannE_2016,CRC
+GuptaA_2019,CRC
+WirbelJ_2018,CRC
+ThomasAM_2018a,CRC
+ThomasAM_2018b,CRC
+ThomasAM_2019_c,CRC

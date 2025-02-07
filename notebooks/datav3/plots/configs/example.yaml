@@ -1,0 +1,4 @@
+results_path: /path/to/file/with/results.csv
+cohort_info_path: /path/to/file/with/cohort/info.csv
+x: heldout_cohort # optional
+hue: model # optional

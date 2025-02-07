@@ -1,0 +1,49 @@
+hpo:
+    CMVIB: {
+        'beta': 0.002328572731418688,
+        'hidden_decoder': [16],
+        'hidden_encoder': [256, 128],
+        'lr': 0.0008459945511399442,
+        'n_latents': 112,
+        'p_drop': 0.11537107810037038,
+    }
+    MVIB: {
+        'beta': 0.0000002770873228921814,
+        'hidden_decoder': [32, 16],
+        'hidden_encoder': [256, 128],
+        'lr': 0.001158043638212586,
+        'n_latents': 30,
+        'p_drop': 0.10151424020466036,
+    }
+    RF: {
+        'criterion': entropy,
+        'max_features': sqrt,
+        'min_samples_leaf': 1,
+        'n_estimators': 222,
+    }
+
+general_config:
+    'n_heads': 1
+    'max_epochs': 60
+    'batch_size': 64
+    'monitor': 'max'
+    'test_size': 0.2
+    'val_size': 0.16
+    'log': False
+    'log_dir': '../results/training_logs/experiments/cross_c_complete_mean/'
+
+    conditioning_type: 'cohort'
+
+    cohorts_to_disease: {
+        "CRC_FengQ_2015": "Colorectal",
+        "CRC_GuptaA_2019": "Colorectal",
+        "CRC_HanniganGD_2017": "Colorectal",
+        "CRC_ThomasAM_2018a": "Colorectal",
+        "CRC_ThomasAM_2018b": "Colorectal",
+        # "CRC_ThomasAM_2019_c": "Colorectal",
+        "CRC_VogtmannE_2016": "Colorectal",
+        "CRC_WirbelJ_2018": "Colorectal",
+        "CRC_YachidaS_2019": "Colorectal",
+        "CRC_YuJ_2015": "Colorectal",
+        "CRC_ZellerG_2014": "Colorectal",
+    }

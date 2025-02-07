@@ -1,0 +1,23 @@
+general_config:
+    'n_heads': 1
+    'max_epochs': 60
+    'batch_size': 64
+    'monitor': 'max'
+    'test_size': 0.2
+    'hpo_seed': 42
+    'run_mode': 'unimodal'
+    'num_samples': 5000
+    'max_concurrent_trials': 10
+
+cohorts_to_disease:
+    "CRC_FengQ_2015": "Colorectal"
+    "CRC_GuptaA_2019": "Colorectal"
+    "CRC_HanniganGD_2017": "Colorectal"
+    "CRC_ThomasAM_2018a": "Colorectal"
+    "CRC_ThomasAM_2018b": "Colorectal"
+    # "CRC_ThomasAM_2019_c": "Colorectal"
+    "CRC_VogtmannE_2016": "Colorectal"
+    "CRC_WirbelJ_2018": "Colorectal"
+    "CRC_YachidaS_2019": "Colorectal"
+    "CRC_YuJ_2015": "Colorectal"
+    "CRC_ZellerG_2014": "Colorectal"
