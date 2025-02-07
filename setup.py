@@ -30,7 +30,7 @@ def description():
 install_requires = _safe_read_lines("./requirements.txt")
 
 setup(
-    name='mcbn',
+    name='gumibair',
     version='0.1.0',
     description=description(),
     long_description=readme(),

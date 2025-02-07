@@ -143,9 +143,9 @@
 #        THIS HEADER MAY NOT BE EXTRACTED OR MODIFIED IN ANY WAY.
 
 from mcbn_experiments.cross_cohort_exp import CrossCohortExperiment
-from mcbn.dataset import FullMicrobiomeDataset
-from mcbn.cond_norm import CondBatchNorm1d, CondBatchNorm1dExtend
-from mcbn.cmvib import CMVIB
+from gumibair.dataset import FullMicrobiomeDataset
+from gumibair.cond_norm import CondBatchNorm1d, CondBatchNorm1dExtend
+from gumibair.cmvib import CMVIB
 from run_experiments import import_data, write_output
 from argparse import ArgumentParser
 from sklearn import model_selection

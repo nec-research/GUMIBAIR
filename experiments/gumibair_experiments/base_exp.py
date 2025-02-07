@@ -142,9 +142,9 @@
 #
 #        THIS HEADER MAY NOT BE EXTRACTED OR MODIFIED IN ANY WAY.
 
-from mcbn.dataset import FullMicrobiomeDataset
-from mcbn.trainer import Trainer
-from mcbn.utils import get_scores, per_cohort_metrics
+from gumibair.dataset import FullMicrobiomeDataset
+from gumibair.trainer import Trainer
+from gumibair.utils import get_scores, per_cohort_metrics
 from mcbn_experiments.utils import set_seed, instantiate_cmvib, instantiate_rf, train_cmvib, test_cmvib, run_rf
 import torch
 import pandas as pd
@@ -201,7 +201,7 @@ class _BaseExperiment:
     def get_condensed_metrics(self, prediction , test_gt):
         """
         Method getting the different performance scores.
-        Uses the get_scores() method from mcbn.utils.
+        Uses the get_scores() method from gumibair.utils.
         :param prediction: tensor with predictions on test samples.
         :param test_gt: tensor with gt labels from test set.
         :return scores: pd.DataFrame with the different scores.
@@ -254,7 +254,7 @@ class _BaseExperiment:
     def run_training(self, seed: int, ids: dict, model, hp: dict) -> tuple:
         """
         Method that runs testing and returns a state and trainer.
-        :return: tuple with state dict and mcbn.Trainer object.
+        :return: tuple with state dict and gumibair.Trainer object.
         """
         set_seed(seed)
         self.check_last_batch(ids['inner_train_ids'], "drop_last_train")
@@ -273,7 +273,7 @@ class _BaseExperiment:
         """
         Method that tests a state of the model.
         :param state: state dict of the trained model.
-        :param trainer: mcbn.Trainer object
+        :param trainer: gumibair.Trainer object
         :return: tuple with prediction and test_gt tensors.
         """
         _, prediction, test_gt, __, ___ = test_cmvib(state, self.dataset, ids, trainer, self.config)

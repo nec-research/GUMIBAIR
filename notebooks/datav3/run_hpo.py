@@ -149,8 +149,8 @@ from run_experiments import import_data
 from argparse import ArgumentParser
 import torch
 from torch.utils.data.sampler import SubsetRandomSampler
-from mcbn.hpo import hpo_train
-from mcbn.dataset import FullMicrobiomeDataset
+from gumibair.hpo import hpo_train
+from gumibair.dataset import FullMicrobiomeDataset
 from mcbn_experiments.utils import hpo_run_rf, hpo_run_cmvib
 
 from typing import Tuple

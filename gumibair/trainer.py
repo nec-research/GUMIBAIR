@@ -158,7 +158,7 @@ from torch.autograd import Variable
 from sklearn.metrics import roc_auc_score, accuracy_score
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 from torch.utils.tensorboard import SummaryWriter
-from mcbn.cmvib import CMVIB
+from gumibair.cmvib import CMVIB
 
 
 class Trainer:

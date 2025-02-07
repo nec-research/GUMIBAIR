@@ -155,8 +155,8 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import roc_auc_score
 from sklearn.model_selection import GridSearchCV, StratifiedKFold
 
-from mcbn.cmvib import CMVIB
-from mcbn.trainer import Trainer
+from gumibair.cmvib import CMVIB
+from gumibair.trainer import Trainer
 from ray import tune
 
 from typing import Tuple

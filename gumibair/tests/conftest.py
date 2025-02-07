@@ -2,14 +2,14 @@ import os
 import sys
 import yaml
 
-# For the testing, the version of mcbn in the local codebase should be used instead of the installed package
+# For the testing, the version of gumibair in the local codebase should be used instead of the installed package
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
 sys.path.append(parent_dir)
 
 import pytest
-from mcbn.dataset import FullMicrobiomeDataset
-from mcbn.cmvib import CMVIB
-from mcbn.trainer import Trainer
+from gumibair.dataset import FullMicrobiomeDataset
+from gumibair.cmvib import CMVIB
+from gumibair.trainer import Trainer
 
 import torch
 from torch.utils.data.sampler import SubsetRandomSampler

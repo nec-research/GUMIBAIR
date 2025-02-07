@@ -143,8 +143,8 @@
 #        THIS HEADER MAY NOT BE EXTRACTED OR MODIFIED IN ANY WAY.
 
 from mcbn_experiments.base_exp import _BaseExperiment
-from mcbn.dataset import FullMicrobiomeDataset
-from mcbn.trainer import Trainer
+from gumibair.dataset import FullMicrobiomeDataset
+from gumibair.trainer import Trainer
 from mcbn_experiments.utils import partial_hold_out_split, complete_hold_out_split
 from sklearn import model_selection
 from sklearn.metrics import roc_auc_score
@@ -328,7 +328,7 @@ class CrossCohortExperiment(_BaseExperiment):
         Based on validation set.
         If no samples of the heldout cohort are contained in the validation set, the method just returns None.
         :param state: state dict of the trained model.
-        :param trainer: mcbn.Trainer object.
+        :param trainer: gumibair.Trainer object.
         :return: either the index of the best performing cohort or None.
         """
         val_ids = self.ids['val_ids']
@@ -371,7 +371,7 @@ class CrossCohortExperiment(_BaseExperiment):
         Implements picking the best-working condition for the heldout cohort,
         based on validation set performance.
         :param state: state dict of the trained model.
-        :param trainer: mcbn.Trainer object.
+        :param trainer: gumibair.Trainer object.
         :param ids: dict with train/val/test ids and labels.
         :param heldout_cohort_idx: int representing the cohort index of the heldout cohort.
         :return: tuple with prediction and test_gt tensors.

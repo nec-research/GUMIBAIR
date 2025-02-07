@@ -1,4 +1,4 @@
-from mcbn.dataset import FullMicrobiomeDataset
+from gumibair.dataset import FullMicrobiomeDataset
 import pandas as pd
 import torch
 import numpy as np

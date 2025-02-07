@@ -1,16 +1,15 @@
-## microbiome-conditional
-Applying the conditional batch normalization to microbiome cohorts.
+## GUMIBAIR
 
 ### Installation
-```mcbn``` can be installed as a Python package **(Python 3.6, PyTorch 1.7, CUDA 10.2)**.
+```gumibair``` can be installed as a Python package **(Python 3.6, PyTorch 1.7, CUDA 10.2)**.
 ```
-cd mcbn
+cd gumibair
 pip install .
 ```
 
 ### Experiments
 #### Implementation
-A package with a simple API to run a bunch of experiments using `mcbn` can be found in the `experiments/mcbn_experiments/` directory and can be installed with:
+A package with a simple API to run a bunch of experiments using `gumibair` can be found in the `experiments/mcbn_experiments/` directory and can be installed with:
 ```
 cd experiments
 pip install .

@@ -157,7 +157,7 @@ from torch.autograd import Variable
 import torch.nn.functional as F
 import math
 from collections import OrderedDict
-from mcbn.cond_norm import CondBatchNorm1d, CondBatchNorm1dExtend
+from gumibair.cond_norm import CondBatchNorm1d, CondBatchNorm1dExtend
 from typing import Tuple
 
 

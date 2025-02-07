@@ -1,5 +1,5 @@
 import torch
-from mcbn.cmvib import CMVIB
+from gumibair.cmvib import CMVIB
 
 def test_instantiate_cmvib(model):
     assert isinstance(model, CMVIB)

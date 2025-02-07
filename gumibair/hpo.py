@@ -148,8 +148,8 @@
 from ray import tune
 import torch
 
-from mcbn.cmvib import CMVIB
-from mcbn.trainer import Trainer
+from gumibair.cmvib import CMVIB
+from gumibair.trainer import Trainer
 
 
 def hpo_train(

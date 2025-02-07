@@ -1,4 +1,4 @@
-from mcbn.cmvib import CMVIB
+from gumibair.cmvib import CMVIB
 
 def test_train(state):
     """

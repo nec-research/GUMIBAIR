@@ -143,7 +143,7 @@
 #        THIS HEADER MAY NOT BE EXTRACTED OR MODIFIED IN ANY WAY.
 
 from mcbn_experiments.base_exp import _BaseExperiment
-from mcbn.dataset import FullMicrobiomeDataset
+from gumibair.dataset import FullMicrobiomeDataset
 from sklearn.model_selection import StratifiedKFold, train_test_split
 import torch
 import pandas as pd
