@@ -9,7 +9,7 @@ pip install .
 
 ### Experiments
 #### Implementation
-A package with a simple API to run a bunch of experiments using `gumibair` can be found in the `experiments/mcbn_experiments/` directory and can be installed with:
+A package with a simple API to run a bunch of experiments using `gumibair` can be found in the `experiments/gumibair_experiments/` directory and can be installed with:
 ```
 cd experiments
 pip install .
