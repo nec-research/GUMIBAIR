@@ -1,0 +1,152 @@
+hpo:
+    CMVIB: {
+        'beta': 0.004012490793766035,
+        'conditioning_mode': multi,
+        'gene_filter': '5',
+        'hidden_decoder': [16],
+        'hidden_encoder': [256, 128],
+        'lr': 0.0008192821385550254,
+        'n_latents': 91,
+        'p_drop': 0.13127596836815333,
+    }
+    MVIB: {
+        'beta': 0.0023077897283253898,
+        'conditioning_mode': single,
+        'gene_filter': '5',
+        'hidden_decoder': [16],
+        'hidden_encoder': [256, 128],
+        'lr': 0.0006950571701316003,
+        'n_latents': 74,
+        'p_drop': 0.28316372454273,
+    }
+    RF: {
+        'criterion': entropy,
+        'gene_filter': None,
+        'max_features': log2,
+        'min_samples_leaf': 3,
+        'n_estimators': 272,
+    }
+
+general_config:
+    'n_heads': 1
+    'max_epochs': 80
+    'batch_size': 64
+    'monitor': 'max'
+    'test_size': 0.2
+    'val_size': 0.15
+    'drop_last_train': False
+    'drop_last_val': False
+    'gene_filter': '5'
+    'log': False
+    'log_dir': '../results/training_logs/checks/multi_label_cond_freeze/'
+
+    conditioning_type: 'multi'
+
+    conditioning_mode: 'multi'
+
+    conditioning_labels: {
+        'age': 'numerical',
+        'gender': 'categorical',
+        # 'sequencing_platform': 'categorical',
+        'DNA_extraction_kit': 'categorical',
+        'BMI': 'numerical',
+        # 'continent': 'categorical'
+        'number_reads': 'numerical'
+    }
+
+    cohorts_to_disease: {
+        "CRC_FengQ_2015": "Colorectal",
+        "CRC_GuptaA_2019": "Colorectal",
+        "CRC_HanniganGD_2017": "Colorectal",
+        "CRC_ThomasAM_2018a": "Colorectal",
+        "CRC_ThomasAM_2018b": "Colorectal",
+        # "CRC_ThomasAM_2019_c": "Colorectal",
+        "CRC_VogtmannE_2016": "Colorectal",
+        "CRC_WirbelJ_2018": "Colorectal",
+        # "CRC_YachidaS_2019": "Colorectal",
+        "CRC_YuJ_2015": "Colorectal",
+        "CRC_ZellerG_2014": "Colorectal",
+    }
+
+    label_dict: {
+        'Colorectal':{  
+            'n': 0, #Colorectal, Colorectal-EMBL, Delta-Colorectal
+            'cancer': 1, #Colorectal
+            'small_adenoma': 0, #Colorectal (to check)
+            'CRC_0': 1, #Colorectal-EMBL, Colorectal-YachidaS, Delta-Colorectal
+            'CRC_I': 1, #Colorectal-EMBL, Colorectal-YachidaS, Delta-Colorectal
+            'CRC_II': 1, #Colorectal-EMBL, Colorectal-YachidaS, Delta-Colorectal
+            'CRC_III': 1, #Colorectal-EMBL, Colorectal-YachidaS, Delta-Colorectal
+            'CRC_IV': 1, #Colorectal-EMBL, Colorectal-YachidaS, Delta-Colorectal
+            'adenoma': 0, #Colorectal-YachidaS, CRC_FengQ_2015, CRC_HanniganGD_2017, CRC_ThomasAM_2018a, CRC_ZellerG_2014 (to check)
+            'carcinoma_surgery_history': 1, #Colorectal-YachidaS (to check)
+            'healthy': 0, #Colorectal-YachidaS, CRC_FengQ_2015, CRC_ThomasAM_2018a, CRC_ThomasAM_2018b, CRC_ThomasAM_2019_c, CRC_VogtmannE_2016, CRC_WirbelJ_2018, CRC_YuJ_2015, CRC_ZellerG_2014
+            'CRC': 1, #CRC_FengQ_2015, CRC_GuptaA_2019, CRC_HanniganGD_2017, CRC_ThomasAM_2018a, CRC_ThomasAM_2018b, CRC_ThomasAM_2019_c, CRC_VogtmannE_2016, CRC_WirbelJ_2018, CRC_YuJ_2015, CRC_ZellerG_2014
+            'CRC;T2D;fatty_liver;hypertension': 1, #CRC_FengQ_2015
+            'CRC;T2D;hypertension': 1, #CRC_FengQ_2015
+            'CRC;fatty_liver': 1, #CRC_FengQ_2015
+            'CRC;fatty_liver;hypertension': 1, #CRC_FengQ_2015
+            'CRC;hypertension': 1, #CRC_FengQ_2015, CRC_ThomasAM_2018a
+            'T2D;adenoma': 0, #CRC_FengQ_2015, CRC_ThomasAM_2018a
+            'T2D;adenoma;fatty_liver': 0, #CRC_FengQ_2015
+            'T2D;adenoma;fatty_liver;hypertension': 0, #CRC_FengQ_2015
+            'T2D;adenoma;hypertension': 0, #CRC_FengQ_2015
+            'T2D;fatty_liver': 0, #CRC_FengQ_2015
+            'T2D;fatty_liver;hypertension': 0, #CRC_FengQ_2015
+            'T2D;hypertension': 0, #CRC_FengQ_2015
+            'adenoma;fatty_liver': 0, #CRC_FengQ_2015
+            'adenoma;fatty_liver;hypertension': 0, #CRC_FengQ_2015
+            'adenoma;hypertension': 0, #CRC_FengQ_2015, CRC_ThomasAM_2018a
+            'fatty_liver': 0, #CRC_FengQ_2015
+            'fatty_liver;hypertension': 0, #CRC_FengQ_2015
+            'hypertension': 0, #CRC_FengQ_2015, CRC_ThomasAM_2018a
+            'CRC;cholesterolemia': 1, #CRC_ThomasAM_2018a
+            'CRC;hypercholesterolemia': 1, #CRC_ThomasAM_2018a
+            'CRC;hypercholesterolemia;hypertension': 1, #CRC_ThomasAM_2018a
+            'CRC;metastases': 1, #CRC_ThomasAM_2018a
+            'adenoma;hypercholesterolemia': 0, #CRC_ThomasAM_2018a
+            'adenoma;hypercholesterolemia;metastases': 0, #CRC_ThomasAM_2018a
+            'adenoma;metastases': 0, #CRC_ThomasAM_2018a
+            'hypercholesterolemia': 0, #CRC_ThomasAM_2018a
+            'hypertension;metastases': 0, #CRC_ThomasAM_2018a (to check)
+            'metastases': 0, #CRC_ThomasAM_2018a (to check)
+            'CRC;T2D':1, #CRC_YuJ_2015
+            'T2D':0, #CRC_YuJ_2015
+            'crc_0':1, #Early-Colorectal-EMBL
+            'crc_I':1, #Early-Colorectal-EMBL
+            'crc_II':1, #Early-Colorectal-EMBL
+            'crc_III':1, #Early-Colorectal-EMBL
+            'crc_IV':1, #Early-Colorectal-EMBL
+            'CRC-0':1,
+            'CRC-I':1,
+            'CRC-II':1,
+            'CRC-III':1,
+            'CRC-IV':1,
+            'few_polyps':0
+        },
+    }
+
+    drop_samples: {
+        'CRC_ThomasAM_2018b': ['CRC_MR_SBJ11C_17', 'CRC_MR_SBJ63H_17'],
+        'CRC_VogtmannE_2016': ['MMRS11664448ST.27.0.0',
+            'MMRS14602194ST.27.0.0',
+            'MMRS42570301ST.27.0.0',
+            'MMRS48639115ST.27.0.0',
+            'MMRS67690541ST.27.0.0',
+            'MMRS71238091ST.27.0.0',
+            'MMRS72802364ST.27.0.0',
+            'MMRS92727331ST.27.0.0',
+            'MMRS93508324ST.27.0.0'],
+        'CRC_YuJ_2015': ['SZAXPI015210.17'],
+        'CRC_YachidaS_2019': ['SAMD00165021'],
+        'CRC_ZellerG_2014': ['CCIS07277498ST.4.0',
+            'CCIS11558985ST.4.0',
+            'CCIS15704761ST.4.0',
+            'CCIS41806458ST.4.0',
+            'CCIS53355328ST.4.0'],
+        'CRC_ThomasAM_2018a': ['LILT_GF15_16',
+            'LILT_VF171_T016',
+            'LILT_VF301_T016',
+            'LILT_VF82_T016'],
+        'CRC_HanniganGD_2017': ['MG100137'],
+    }
