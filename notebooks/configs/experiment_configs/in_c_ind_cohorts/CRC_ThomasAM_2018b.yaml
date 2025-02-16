@@ -1,0 +1,99 @@
+hpo:
+  CMVIB:
+    beta: 0.004012490793766035
+    conditioning_mode: multi
+    gene_filter: '5'
+    hidden_decoder:
+    - 16
+    hidden_encoder:
+    - 256
+    - 128
+    lr: 0.0008192821385550254
+    n_latents: 91
+    p_drop: 0.13127596836815333
+  MVIB:
+    beta: 0.0023077897283253898
+    conditioning_mode: single
+    gene_filter: '5'
+    hidden_decoder:
+    - 16
+    hidden_encoder:
+    - 256
+    - 128
+    lr: 0.0006950571701316003
+    n_latents: 74
+    p_drop: 0.28316372454273
+  RF:
+    criterion: entropy
+    gene_filter: None
+    max_features: log2
+    min_samples_leaf: 3
+    n_estimators: 272
+general_config:
+  n_heads: 1
+  max_epochs: 120
+  batch_size: 64
+  monitor: max
+  test_size: 0.2
+  val_size: 0.16
+  gene_filter: '5'
+  log: false
+  log_dir: ../results/training_logs/experiments/in_c_indcohort/
+  conditioning_type: cohort
+  label_dict:
+    Colorectal:
+      n: 0
+      cancer: 1
+      small_adenoma: 0
+      CRC_0: 1
+      CRC_I: 1
+      CRC_II: 1
+      CRC_III: 1
+      CRC_IV: 1
+      adenoma: 0
+      carcinoma_surgery_history: 1
+      healthy: 0
+      CRC: 1
+      CRC;T2D;fatty_liver;hypertension: 1
+      CRC;T2D;hypertension: 1
+      CRC;fatty_liver: 1
+      CRC;fatty_liver;hypertension: 1
+      CRC;hypertension: 1
+      T2D;adenoma: 0
+      T2D;adenoma;fatty_liver: 0
+      T2D;adenoma;fatty_liver;hypertension: 0
+      T2D;adenoma;hypertension: 0
+      T2D;fatty_liver: 0
+      T2D;fatty_liver;hypertension: 0
+      T2D;hypertension: 0
+      adenoma;fatty_liver: 0
+      adenoma;fatty_liver;hypertension: 0
+      adenoma;hypertension: 0
+      fatty_liver: 0
+      fatty_liver;hypertension: 0
+      hypertension: 0
+      CRC;cholesterolemia: 1
+      CRC;hypercholesterolemia: 1
+      CRC;hypercholesterolemia;hypertension: 1
+      CRC;metastases: 1
+      adenoma;hypercholesterolemia: 0
+      adenoma;hypercholesterolemia;metastases: 0
+      adenoma;metastases: 0
+      hypercholesterolemia: 0
+      hypertension;metastases: 0
+      metastases: 0
+      CRC;T2D: 1
+      T2D: 0
+      crc_0: 1
+      crc_I: 1
+      crc_II: 1
+      crc_III: 1
+      crc_IV: 1
+      CRC-0: 1
+      CRC-I: 1
+      CRC-II: 1
+      CRC-III: 1
+      CRC-IV: 1
+      few_polyps: 0
+  cohorts_to_disease:
+    CRC_ThomasAM_2018b: Colorectal
