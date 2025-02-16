@@ -151,7 +151,7 @@ import torch
 from torch.utils.data.sampler import SubsetRandomSampler
 from gumibair.hpo import hpo_train
 from gumibair.dataset import FullMicrobiomeDataset
-from mcbn_experiments.utils import hpo_run_rf, hpo_run_cmvib
+from gumibair_experiments.utils import hpo_run_rf, hpo_run_cmvib
 
 from typing import Tuple
 import os

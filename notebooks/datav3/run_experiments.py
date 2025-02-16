@@ -143,9 +143,9 @@
 #        THIS HEADER MAY NOT BE EXTRACTED OR MODIFIED IN ANY WAY.
 
 from gumibair.dataset import FullMicrobiomeDataset
-from mcbn_experiments.in_cohort_exp import InCohortExperiment
-from mcbn_experiments.cross_cohort_exp import CrossCohortExperiment
-from mcbn_experiments.utils import load_config
+from gumibair_experiments.in_cohort_exp import InCohortExperiment
+from gumibair_experiments.cross_cohort_exp import CrossCohortExperiment
+from gumibair_experiments.utils import load_config
 import torch
 import pandas as pd
 import os

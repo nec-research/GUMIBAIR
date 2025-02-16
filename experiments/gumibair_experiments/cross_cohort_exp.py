@@ -142,10 +142,10 @@
 #
 #        THIS HEADER MAY NOT BE EXTRACTED OR MODIFIED IN ANY WAY.
 
-from mcbn_experiments.base_exp import _BaseExperiment
+from gumibair_experiments.base_exp import _BaseExperiment
 from gumibair.dataset import FullMicrobiomeDataset
 from gumibair.trainer import Trainer
-from mcbn_experiments.utils import partial_hold_out_split, complete_hold_out_split
+from gumibair_experiments.utils import partial_hold_out_split, complete_hold_out_split
 from sklearn import model_selection
 from sklearn.metrics import roc_auc_score
 import inspect

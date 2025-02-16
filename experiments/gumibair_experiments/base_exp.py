@@ -145,7 +145,7 @@
 from gumibair.dataset import FullMicrobiomeDataset
 from gumibair.trainer import Trainer
 from gumibair.utils import get_scores, per_cohort_metrics
-from mcbn_experiments.utils import set_seed, instantiate_cmvib, instantiate_rf, train_cmvib, test_cmvib, run_rf
+from gumibair_experiments.utils import set_seed, instantiate_cmvib, instantiate_rf, train_cmvib, test_cmvib, run_rf
 import torch
 import pandas as pd
 from timeit import default_timer as timer
