@@ -245,12 +245,12 @@ class FullMicrobiomeDataset(Dataset):
         if scale_abundance:
             ab_scaler = StandardScaler()
             abundance_stack = ab_scaler.fit_transform(abundance_stack)
-            abundance_stack = torch.from_numpy(abundance_stack)
+            abundance_stack = torch.tensor(abundance_stack, dtype=torch.float32)
 
         if scale_markers:
             markers_scaler = StandardScaler()
             markers_stack = markers_scaler.fit_transform(markers_stack)
-            markers_stack = torch.from_numpy(markers_stack)
+            markers_stack = torch.tensor(markers_stack, dtype=torch.float32)
 
         self.abundance = abundance_stack#.to(device)
         self.markers = markers_stack#.to(device)
