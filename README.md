@@ -1,6 +1,28 @@
 ## GUMIBAIR
 
-### Installation
+### Prerequisites
+- conda
+- GNU Make
+
+### Running the experiments
+To fetch the input data, run:
+```bash
+make data
+```
+
+To create the conda environment for running the experiments, run:
+```bash
+make env_run_experiments
+```
+
+Then, go to the `notebooks/experiment_scripts` directory and run the desired script.
+E.g.:
+```bash
+cd notebooks/experiment_scripts
+./run_in_c.sh /path/to/data/dir
+```
+
+### Manual Installation of the GUMIBAIR packages
 ```gumibair``` can be installed as a Python package **(Python 3.6, PyTorch 1.7, CUDA 10.2)**.
 ```
 cd gumibair
