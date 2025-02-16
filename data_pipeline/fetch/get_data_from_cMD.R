@@ -147,8 +147,8 @@ library(curatedMetagenomicData)
 library(dplyr)
 library(DT)
 
-setwd("/home/nle-mvonstetten/microbiome-conditional/data_pipeline/fetch")
-output_dir <- "/home/nle-mvonstetten/microbiome-conditional/data_pipeline/data/"
+setwd("./fetch/")
+output_dir <- "../data/"
 studies <- read.csv(file="studies.txt", sep=",")
 n_row <- 210
 
@@ -158,7 +158,7 @@ create_output_table <- function(study_name, cohort_name,  data_modality){
     if (data_modality == "abundance"){
       data_flag <- ".relative_abundance"
     } else if (data_modality == "marker"){
-      data_flag <- ".marker_presence"
+      data_flag <- ".marker_abundance"
     } else {
       stop("Wrong input for data modality!")
     }
@@ -199,11 +199,9 @@ for (i in 1:(nrow(studies))){
     cohort_name <- studies[,2][i]
 
     output_marker <- paste0(output_dir, "marker", '_', cohort_name, '_', study_name, '.txt')
-    output_abundance <- paste0(output_dir, "abundance", '_', cohort_name, '_', study_name, '.txt')
     
-    if (file.exists(output_marker) == FALSE & file.exists(output_abundance) == FALSE){
+    if (file.exists(output_marker) == FALSE){
       create_output_table(study_name, cohort_name, "marker")
-      create_output_table(study_name, cohort_name, "abundance")
     }
     else {
       print(paste0("Output for ", study_name, " already exists!"))
